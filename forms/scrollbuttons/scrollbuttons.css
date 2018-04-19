@@ -1,0 +1,57 @@
+/**
+ * @summary Render scroll buttons with arrows
+ * @author Rustam Guliev <glvrst@gmail.com>
+ * @link https://github.com/rguliev/helpers-web
+ */
+
+#scroll_buttons_fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 25px
+}
+
+#scroll_buttons_fixed .btn-scroll {
+    display: block;
+    position: relative;
+    width: 46px;
+    height: 46px;
+    margin-left: -23px;
+    border: 2px solid #000;
+    border-radius: 100%;
+    box-sizing: border-box;
+    background-color: transparent
+}
+
+#scroll_buttons_fixed .btn-scroll span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: '';
+    width: 16px;
+    height: 16px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    box-sizing: border-box;
+    z-index: -1
+}
+
+#scroll_up {
+    display: none;
+}
+
+#scroll_down span {
+    margin: -12px 0 0 -8px;
+    border-left: 2px solid #000;
+    border-bottom: 2px solid #000
+}
+
+#scroll_up span {
+    margin: -6px 0 0 -8px;
+    border-right: 2px solid #000;
+    border-top: 2px solid #000
+}
+
+#scroll_buttons_fixed .btn-scroll:hover, #scroll_buttons_fixed .btn-scroll:hover span {
+    border-color: #A9A9A9
+}
